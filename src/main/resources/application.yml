@@ -1,0 +1,16 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: HospitalSanJose
+  datasource:
+    url: jdbc:sqlserver://hospital-sanjose-demo.database.windows.net:1433;databaseName=HospitalSanJose;encrypt=true;trustServerCertificate=true
+    username: jisus
+    password: jesusklm25Z27k.
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
