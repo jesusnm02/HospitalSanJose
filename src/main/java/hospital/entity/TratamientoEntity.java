@@ -18,7 +18,7 @@ public class TratamientoEntity {
     @Column(name = "id_sugerencias")
     private int idSugerencias;
 
-    @Column(name = "texto", length = 100)
+    @Column(name = "texto", length = 400)
     private String texto;
 
     @Column(name = "precio")

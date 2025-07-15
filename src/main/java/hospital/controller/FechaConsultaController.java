@@ -21,7 +21,7 @@ import hospital.service.FechaConsultaService;
 
 @Controller
 @RequestMapping("/fechaConsulta")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://hospitalsanjose-e3a0f.web.app")
 public class FechaConsultaController {
 
 	@Autowired

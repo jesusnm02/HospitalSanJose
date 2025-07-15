@@ -16,7 +16,7 @@ import hospital.service.DoctorService;
 
 @RestController
 @RequestMapping("/doctor")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://hospitalsanjose-e3a0f.web.app")
 public class DoctorController {
 
 	@Autowired

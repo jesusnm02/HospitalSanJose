@@ -18,6 +18,6 @@ public class RecomendacionDeIa {
     @Column(name = "id_ia")
     private int idIa;
 
-    @Column(name = "recomendacion", nullable = false, length = 60)
+    @Column(name = "recomendacion", nullable = false, length = 300)
     private String recomendacion;
 }
