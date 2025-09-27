@@ -62,19 +62,18 @@ public class FechaConsultaService {
         fechaConsulta.setTratamiento(tratamientoGuardado);
 
         List<RecomendacionDeIa> recomendacionesParaAsociar = new ArrayList<>();
-        for (RecomendacionDeIa recRecibida : recomendacionesRecibidas) {
-            Optional<RecomendacionDeIa> existingRec = recomendacionDeIaRepository.findByRecomendacion(recRecibida.getRecomendacion());
 
-            if (existingRec.isPresent()) {
-                recomendacionesParaAsociar.add(existingRec.get());
-            } else {
-                RecomendacionDeIa recomendacionGuardada = recomendacionDeIaRepository.save(recRecibida);
-                recomendacionesParaAsociar.add(recomendacionGuardada);
-            }
+        for (RecomendacionDeIa recRecibida : recomendacionesRecibidas) {
+            // Guardamos directamente cada recomendación recibida
+            RecomendacionDeIa recomendacionGuardada = recomendacionDeIaRepository.save(recRecibida);
+            recomendacionesParaAsociar.add(recomendacionGuardada);
         }
+
         fechaConsulta.setRecomendacionesIa(recomendacionesParaAsociar);
 
+        // Guardamos la fechaConsulta con todas sus asociaciones
         return fechaConsultaRepository.save(fechaConsulta);
+
     }
     
     public Optional<List<FechaConsulta>> getFechaConsultaByDni(String dni) {
