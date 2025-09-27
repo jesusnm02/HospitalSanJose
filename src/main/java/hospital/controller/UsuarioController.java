@@ -17,7 +17,7 @@ import hospital.service.UsuarioService;
 
 @Controller
 @RequestMapping("/usuario")
-@CrossOrigin(origins = "https://hospitalsanjose-e3a0f.web.app")
+@CrossOrigin(origins = "https://frontendhospitalsanjose.web.app")
 public class UsuarioController {
 
 	@Autowired
