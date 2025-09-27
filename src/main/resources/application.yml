@@ -4,9 +4,9 @@ spring:
   application:
     name: HospitalSanJose
   datasource:
-    url: jdbc:sqlserver://hospital-sanjose-demo.database.windows.net:1433;databaseName=HospitalSanJose;encrypt=true;trustServerCertificate=true
-    username: jisus
-    password: jesusklm25Z27k.
+    url: jdbc:sqlserver://lrpd1.database.windows.net:1433;databaseName=HospitalSanJose;encrypt=true;trustServerCertificate=true;
+    username: molina
+    password: vamosdios45$
   jpa:
     show-sql: true
     hibernate:
